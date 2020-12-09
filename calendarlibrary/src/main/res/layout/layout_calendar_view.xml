@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="20dp"
+            android:src="@drawable/ic_calendar_arrow_left" />
+
+        <TextView
+            android:id="@+id/tv_current_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="2020"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="20dp"
+            android:src="@drawable/ic_calendar_arrow_right" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="7">
+
+        <TextView
+            style="@style/style_week"
+            android:text="日" />
+
+        <TextView
+            style="@style/style_week"
+            android:text="一" />
+
+        <TextView
+            style="@style/style_week"
+            android:text="二" />
+
+        <TextView
+            style="@style/style_week"
+            android:text="三" />
+
+        <TextView
+            style="@style/style_week"
+            android:text="四" />
+
+        <TextView
+            style="@style/style_week"
+            android:text="五" />
+
+        <TextView
+            style="@style/style_week"
+            android:text="六" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+</LinearLayout>
